@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=47FQtS6XkphGqmZ5nSEj6WTSTwE8SGaT"></script>
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=47FQtS6XkphGqmZ5nSEj6WTSTwE8SGaT"></script>
   <style>
   /* 元素有些默认属性， 我们将他重置掉 css reset 工作流程 */
   * {
@@ -19,13 +19,13 @@
     height: 100vh;
     background-color: pink;
   }
-  .suggestion{
-      position: absolute;
-      top: 0;
-      right: 10vw;
-      width: 10vw;
-      height: 10vh;
-      background-color: green;
+  .suggestion {
+    position: absolute;
+    top: 0;
+    right: 10vw;
+    width: 10vw;
+    height: 10vh;
+    background-color: green;
   }
   </style>
 </head>
@@ -35,9 +35,14 @@
   <!-- <div id="map"></div> -->
   <!-- 容器 地图 在这里显示 -->
   <div>
-      <div id="map"></div>
-      <div class="suggestion"></div>
+    <div id="map"></div>  
+    <div class="suggestion">
+      <div id="r-result">请输入:
+        <input type="text" id="suggestId" size="20" value="百度">
+      </div>
+    </div>
   </div>
+  
   <script>
   // js 的编程 html, css , js 都加载完成了
   // baidu sdk 下载完成
@@ -48,7 +53,7 @@
 
     // console.log('ready')
     var map = new BMap.Map('map'); // 实例化地图
-    map.centerAndZoom("东华理工大学南昌校区", 17) // 中心设置 zoom 
+    map.centerAndZoom("江西省九江市", 17) // 中心设置 zoom 
 
   }
   </script>
